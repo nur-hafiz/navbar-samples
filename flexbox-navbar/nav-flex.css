@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: white;
+}
+nav {
+    background-color: #4281A4;
+}
+nav > .nav-list{
+    list-style-type: none;
+}
+
+@media (min-width: 801px) {
+    nav {
+        display: block;
+    }
+    nav > .mobile-logo {
+        display: none;
+    }
+
+    nav > .nav-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        padding: 10px 40px 10px 50px; 
+    }
+    li{
+        margin-right: 15px;
+    }
+
+    /**** Logo left and all items, logout right****/
+    nav.nav-style-1 .nav-list li:last-of-type {
+        margin-left: auto;
+    }
+
+
+    /**** Logo left, all items middle, logout right****/
+    nav.nav-style-2 .nav-list {
+        justify-content: center;
+    }
+    nav.nav-style-2 .nav-list li:first-of-type {
+        margin-right: auto;
+    }
+    nav.nav-style-2 .nav-list li:last-of-type {
+        margin-left: auto;
+    }
+
+
+    /**** Logo left, all items and logout right****/
+    nav.nav-style-3 .nav-list li:nth-of-type(2) {
+        margin-left: auto;
+    }
+
+}
+
+@media (max-width: 800px) {
+    nav {
+        height: 40px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    nav > .nav-list {
+        display: none;
+    }
+    
+    nav > .mobile-logo {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        top: 10px;
+        left: 5px;
+    }
+
+    nav > .nav-list {
+        width: 94%;
+        height: 0px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-list-items:first-of-type {
+        display: none;
+    }
+
+    .nav-opened {
+        animation: nav-opened 0.25s forwards;
+    }
+    .nav-closed {
+        animation: nav-closed 0.25s forwards;
+    }
+    .nav-list-opened {
+        animation: nav-list-opened 0.25s forwards;
+    }
+    .nav-list-closed {
+        animation: nav-list-closed 0.25s forwards;
+    }
+
+    @keyframes nav-opened {
+        0%{
+            height: 40px;
+        }
+        100%{
+            height: 200px;
+        }
+    }
+    @keyframes nav-closed {
+        0%{
+            height: 200px;
+        }
+        100%{
+            height: 40px;
+        }
+    }
+    @keyframes nav-list-opened {
+        0%{
+            height: 0px;
+        }
+        100%{
+            height: auto;
+        }
+    }
+    @keyframes nav-list-closed {
+        0%{
+            height: 100px;
+        }
+        100%{
+            height: auto;
+        }
+    }
+
+    #burger-container {
+        margin-left: auto;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

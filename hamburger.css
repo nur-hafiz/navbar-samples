@@ -1,0 +1,128 @@
+/* Mobile */
+
+@media (min-width: 801px) {
+    #burger-container {
+        display: none;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 800px){
+    #burger-container {
+        width: 30px;
+        height: 20px;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 10px;
+    }
+    #burger-container > div {
+        width: 30px;
+        height: 4px;
+        position: absolute;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    .burger-top {
+        top: 10px;
+    }
+    .burger-mid {
+        top: 18px;
+    }
+    .burger-bot {
+        top: 26px;
+    }
+
+    .burger-top--closed {
+        animation: burger-top--closed 0.25s forwards;
+    }
+    .burger-mid--closed {
+        animation: burger-mid--closed 0.25s forwards;
+    }
+    .burger-bot--closed {
+        animation: burger-bot--closed 0.25s forwards;
+    }
+
+    @keyframes burger-top--closed {
+        0%{
+            top: 10px;
+        }
+        50%{
+            transform: rotate(0deg);
+            top: 18px;
+        }
+        100%{
+            top: 18px;
+            transform: rotate(45deg);
+        }
+    }
+    @keyframes burger-mid--closed {
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes burger-bot--closed {
+        0%{
+            top: 26px;
+        }
+        50%{
+            transform: rotate(0deg);
+            top: 18px;
+        }
+        100%{
+            top: 18px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .burger-top--opened {
+        animation: burger-top--opened 0.25s forwards;
+    }
+    .burger-mid--opened {
+        animation: burger-mid--opened 0.25s forwards;
+    }
+    .burger-bot--opened {
+        animation: burger-bot--opened 0.25s forwards;
+    }
+
+    @keyframes burger-top--opened {
+        0%{
+            transform: rotate(45deg);
+            top: 18px;
+        }
+        50%{
+            transform: rotate(0deg);
+            top: 18px;
+        }
+        100%{
+            top: 10px;
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes burger-mid--opened {
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes burger-bot--opened {
+        0%{
+            top: 18px;
+            transform: rotate(-45deg);
+        }
+        50%{
+            transform: rotate(0deg);
+            top: 18px;
+        }
+        100%{
+            top: 26px;
+            transform: rotate(0deg);
+        }
+    }
+}
+

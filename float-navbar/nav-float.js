@@ -3,14 +3,10 @@ let navbarList = document.getElementsByClassName("nav-list");
 
 hamburger.addEventListener("click", function(){
     if (!hamburger.classList.contains("opened")){
-        navbar[0].classList.add("nav-closed");
-        navbar[0].classList.remove("nav-opened");
         navbarList[0].classList.add("nav-list-closed");
         navbarList[0].classList.remove("nav-list-opened");
         return false;
     }
-    navbar[0].classList.add("nav-opened");
-    navbar[0].classList.remove("nav-closed");
     navbarList[0].classList.add("nav-list-opened");
     navbarList[0].classList.remove("nav-list-closed");
 });

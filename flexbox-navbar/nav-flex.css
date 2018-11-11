@@ -64,21 +64,25 @@ nav > .nav-list{
         flex-direction: column;
     }
     
+    nav > #burger-container {
+        margin-left: auto;
+    }
+
     nav > .nav-list {
         display: none;
     }
     
     nav > .mobile-logo {
-        display: block;
-        position: absolute;
+        top: 10px;
+        left: 40px; /*Change this according to nav > .nav-list padding left*/
         width: 30px;
         height: 20px;
-        top: 10px;
-        left: 5px;
+        display: block;
+        position: absolute;
     }
 
     nav > .nav-list {
-        width: 94%;
+        width: 94%; /*Media query this if (align-items: flex-end), smaller width for smaller screen sizes*/
         height: 0px;
         overflow: hidden;
         display: flex;
@@ -135,11 +139,8 @@ nav > .nav-list{
             height: auto;
         }
     }
-
-    #burger-container {
-        margin-left: auto;
-    }
 }
+
 
 a {
     text-decoration: none;
